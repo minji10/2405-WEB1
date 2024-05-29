@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 1px #222 solid;
+
+
+            /* 실제사용x  flex 사용o */
+                text-align: center;
+                line-height: 200px;
+
+            /* line-height:  */
+
+            /* 세로정렬로검색하면 나오긴하는데 */
+            /*  */
+            /* vertical- */
+
+        }
+
+        .box-block{
+            display: block;
+        }
+        .box-inline{
+            display: inline;
+        }
+        .box-inline-block{
+            display: inline-block;
+        }
+        .box-none{
+            display: none;
+
+            /* opacity: 0;
+            위 속성과 같은 잗동을 하지만
+            투명도는 0부터1(100%)까지 값이 연결되기땨문에
+            애니매이션 효과 결과 부여 가능 */
+
+
+             /* visibility: hidden; 
+                display: none과 비슷하게 컨텐츠를 안보이게 만들어준다.
+                실제는 존재하되 투명하게 만들어주는 기능. 
+                display: none;은 실제로 없게 만들어준다.
+             */
+
+          
+        }
+    </style>
+</head>
+<body>
+    <div class="box box-block">block</div>
+    <div class="box box-inline">inline</div>
+    <div class="box box-inline-block">inline-block</div>
+    <div class="box box-none">none</div>
+    <hr>
+    <!-- cirl+방향키= 한덩이씩이동 -->
+</body>
+</html>
