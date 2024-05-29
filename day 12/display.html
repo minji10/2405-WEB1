@@ -17,11 +17,13 @@
                 text-align: center;
                 line-height: 200px;
 
-            /* line-height:  */
+            /* line-height는 흔히 행간을 설정하는 속성으로 알고있지만
+                사실 줄 높이를 설정하는 속성이다.
+                부모컨텐츠의 높이와 같은 값을 주면 수직방향으로 가운데정렬된다.  */
 
-            /* 세로정렬로검색하면 나오긴하는데 */
-            /*  */
-            /* vertical- */
+            /* 세로정렬로검색하면 나오긴하는데
+             테이블에서만 쓸수있는 속성이라 활용 불가능 
+             vertical-align: middle; */
 
         }
 
@@ -37,19 +39,18 @@
         .box-none{
             display: none;
 
+            /* visibility: hidden; 
+            display: none과 비슷하게 컨텐츠를 안보이게 만들어준다.
+            실제는 존재하되 투명하게 만들어주는 기능. 
+            display: none;은 실체가 없게 만들어준다.
+            */
+            
+            
             /* opacity: 0;
-            위 속성과 같은 잗동을 하지만
+            위 속성과 같은 작동을 하지만
             투명도는 0부터1(100%)까지 값이 연결되기땨문에
-            애니매이션 효과 결과 부여 가능 */
-
-
-             /* visibility: hidden; 
-                display: none과 비슷하게 컨텐츠를 안보이게 만들어준다.
-                실제는 존재하되 투명하게 만들어주는 기능. 
-                display: none;은 실제로 없게 만들어준다.
-             */
-
-          
+            애니매이션 효과 결과 부여 가능.
+            visibility: hidden; 을 사용할 이유가 없다. */
         }
     </style>
 </head>
