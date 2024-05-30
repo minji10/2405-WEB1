@@ -16,35 +16,76 @@
 </head>
 <body>
     <!-- img#img-id.img-class -->
-    <img id="img-id" class="img-class" src="주소" alt="대체택스트">
+    <img id="img-id" class="img-class" src="../img/다운로드.jpg" alt="대체택스트">
+    <img src="../img/다운로드.jpg" alt="" class="img-class">
+    <img src="../img/다운로드.jpg" alt="" id="img-id">
+
     <!-- 
         * : 전체 선택지, 초기화 용도로 사용한다.(margin 0, padding 0)
-        img : 태그선택자. 특정 태그를 초기화 하는데에 사용(ing( display : block; )등)
+        img : 태그선택자. 특정 태그를 초기화 하는데에 사용(img( display : block; )등)
         #img-id : 아이디 선택자. 유니크한 값으로 높은 우선순위를 가진다.
         .img-class : 클래스 선택자.가장 일반적으로 가장 많이 사용하는 형태
      -->
+     <!-- [ #img-id.img-class ] 
+        <div id="img-id" class="img-class"></div> -->
+     <!-- img#img-id.img-class 
+        <img src="" alt="" id="img-id" class="img-class"> -->
 
      <div class="container">
         <div class="hi hello">
             <div class="bye">test</div>
         </div>
-     </div>
+        <div class="hi"></div>
+    </div>
      <!-- 
-        후손선택자 :     [ .container .bye ](o)        [.hi bye](o)
-        자식선택자 :     [ .container > .bye ](x)      [.hi > bye](o)
+        후손선택자 :     [ .container .bye ](o)    컨테이너 안에 바이가있다 라는뜻    [.hi bye](o)
+        자식선택자 :     [ .container > .bye ](x)  컨테이너의 자식이 바이라는뜻(컨테이너의 자식은 하이헬로라서 틀림)   [.hi > bye](o)
 
         후손, 자식 선택지는 css를 구조적으로 만들어 줄 수있는 반면,
         남용하게되면 유지보수가 힘들어질수 있으니 너무 많은 단계를 쓰는것은 지양.
 
-        *[.hi.hello] = hi면서hello인것  [ .container .bye ] = container 의 하위 bye
+        *[.hi.hello] = hi면서hello인것 / [ .container .bye ] = container 의 하위 bye
                              띄어쓰기 차이 중요함
       -->
       <input type="button" value="버튼" class="test-button">
-      <div type>디브</div>
+      <div 내맘대로="속성" type="test-button">디브..</div>
+      <div type="button-divs">디브22</div>
+      <div type="button-ffffff">디브33</div>
+      <a href="../day 12/chess.html">
+        <img src="../img/다운로드.jpg" alt="">
+      </a>
+
       <!-- 
-        [type] :해당 속성을 가지고 있는 개체를 대상으로함
-        
+          [type] :해당 속성을 가지고 있는 개체를 대상으로함
+          [type='button'] : 속성이 문자열과 같을때
+          [type~='button'] : 띄어쓰기 구분해 해당 문자열이 포함되어있을때
+          [type|='button'] : 속성이 문자열과 같거나, 문자열 뒤에 -(하이픈)이 붙어있을때
+          [type^='button'] : 해당 문자열로 시작할때
+          [type$='button'] : 해당 문자열로 끝날때
+          [type*='button'] : 해당 문자열이 포함될때
        -->
+
+     <style>
+        .첫째 + .둘째{
+            color: pink;
+        }
+
+        .첫째 ~ .셋째{
+            background-color: blue;
+        }
+     </style>  
+     <div class="container">
+        <div class="첫째">111</div>
+        <div class="둘째">222</div>
+        <div class="셋째">333</div>
+        <div class="넷째">4444</div>
+     </div>
+
+     <!-- 
+        .첫째 + 둘째 : 첫째뒤에 .둘째가 딱 붙어있을때만 작동 뒤에꺼에 적용됨
+                        셋째나 넷째랑 순서가 바뀌면 작동안함. 둘만 붙어있으면 됨
+        .첫째 ~ .섯째 : .첫째뒤에 .셋째가 있기만 하면 작동
+      -->
 
 </body>
 </html>
