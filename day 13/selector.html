@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        
+        [type]{
+            background-color: pink;
+            width: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- img#img-id.img-class -->
+    <img id="img-id" class="img-class" src="주소" alt="대체택스트">
+    <!-- 
+        * : 전체 선택지, 초기화 용도로 사용한다.(margin 0, padding 0)
+        img : 태그선택자. 특정 태그를 초기화 하는데에 사용(ing( display : block; )등)
+        #img-id : 아이디 선택자. 유니크한 값으로 높은 우선순위를 가진다.
+        .img-class : 클래스 선택자.가장 일반적으로 가장 많이 사용하는 형태
+     -->
+
+     <div class="container">
+        <div class="hi hello">
+            <div class="bye">test</div>
+        </div>
+     </div>
+     <!-- 
+        후손선택자 :     [ .container .bye ](o)        [.hi bye](o)
+        자식선택자 :     [ .container > .bye ](x)      [.hi > bye](o)
+
+        후손, 자식 선택지는 css를 구조적으로 만들어 줄 수있는 반면,
+        남용하게되면 유지보수가 힘들어질수 있으니 너무 많은 단계를 쓰는것은 지양.
+
+        *[.hi.hello] = hi면서hello인것  [ .container .bye ] = container 의 하위 bye
+                             띄어쓰기 차이 중요함
+      -->
+      <input type="button" value="버튼" class="test-button">
+      <div type>디브</div>
+      <!-- 
+        [type] :해당 속성을 가지고 있는 개체를 대상으로함
+        
+       -->
+
+</body>
+</html>
