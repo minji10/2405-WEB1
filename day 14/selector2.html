@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../reset.css">
-    <style>
-
-    </style>
 </head>
 <body>
     <!-- 
@@ -23,7 +20,22 @@
         of-type : 유형(내가 몇번째로 등장하는지가 중요)(or조건)
      -->
 
+     <style>
+        div:nth-child(3){
 
+        }
+
+        div:nth-of-type(3){
+            color: red;
+        }
+     </style>
+
+     <section class="container">
+        <div class="첫째">1</div>
+        <div class="둘째">2</div>
+        <p class="셋째">3</p>
+        <div class="넷째">4</div>
+     </section>
 
      <!-- 
         반응 선택자
@@ -57,11 +69,19 @@
         반응 선택자
       </div>
 
+      <style>
+        .reaction-container:hover > h3{
+            color: pink;
+        }
+        .reaction-container:hover > p{
+            color: blue;
+        }
+      </style>
 
-
-
-
-
+    <div class="reaction-container">
+        <h3 class="reaction-title">반응하는 제목</h3>
+        <p class="reaction">반응하는 본문영역</p>
+    </div>
 
       <!-- 
         상태선택자 : input의 부수속성
@@ -121,6 +141,52 @@
         ::befor   디자인만을 위한 태그를 만드는 대신 사용하기 좋은 방법
         ::selection  - 드래그한 영역에 적용
         -->
+        <style>
+            body > .char-container{
+                color: #222;
+            }
+            .char-container::first-letter{
+                font-size: 20px;
+                background-color: pink;
+                color: blue;
+            }
+            .char-container::first-line{
+                font-size: 20px;
+                background-color: cadetblue;
+                color: white;
+            }
+            .after-container{
+                font-size: 24px;
+                font-weight: bold;
+                color: #222;
+            }
+            
+            .after-container::after{
+                content: '';
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background-color: cadetblue;
+            }
+
+            .after-container::after{
+                background-color: pink;
+            }
+            
+            .after-container::selection{
+                background-color: cadetblue;
+                color: white;
+            }
+        </style>
+
+        <div class="char-container">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quis soluta sed facilis dolores nobis omnis nulla rem voluptate in porro excepturi reiciendis qui doloremque enim dignissimos dolorem eaque error?
+        </div>
+
+        <div class="after-container">
+            안녕하세요
+        </div>
 
         <!-- 
             부정선택자
@@ -128,10 +194,29 @@
          -->
 
          <style>
-
+            .my-container{
+                width: 620px;
+                height: 200px;
+                border: 1px solid #222;
+            }
+            .my-content{
+                width: 200px;
+                height: 200px;
+                background-color: lightpink;
+                float: left;
+                /* margin-right: 10px; */
+            }
+            .my-content:not(:last-child){
+                margin-right: 10px;
+            }
+            /* .my-content:last-child{
+                margin-right: 0;
+            } */
          </style>
          
          <div class="my-container">
+            <div class="my-content"></div>
+            <div class="my-content"></div>
             <div class="my-content"></div>
          </div>
 </body>
