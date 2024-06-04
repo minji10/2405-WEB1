@@ -13,30 +13,44 @@
             /* 
             background size : 배경의 크기를 다룰 수 있게 해주는 속성
             100% : 컨텐츠의 width를 기준으로 가득채운다.
-            100% 100% : width,height를 기준으로 가득 채운다(놑은 확룰로 이미지 찌그러짐)
+            100% 100% : width,height를 기준으로 가득 채운다(높은 확룰로 이미지 찌그러짐)
             cover : 배경을 유동적으로 늘려 비율은 유지한 상태로 컨텐츠의 빈공간을 안보이게 덮어준다.
+                        크기에 따라 이미지가 잘림
             contain :  배경을 유동적으로 늘리거나 줄여 비율을 유지한 상태로 배경이미지를 전부 보이게 해분다.
+                        이미지가 안잘리고 비율유지하며 전부 다 보여줌 여백이 생김
             */
 
             background-size: cover;
+            /* background-size: contain; */
 
             /* 
-            background-imge속성은 포토샵의 레이어처럼 여러 이미지를 중첩할 수 있다 
+            background-imge속성은 포토샵의 레이어처럼 여러 이미지를 중첩할 수 있다 .
             */
+            background-image: url(../img/폼폼푸린.png), linear-gradient(326deg, #861657 0%, #ffa69e 74%);
+            /* 그라디언트 넣는거 background-color 아니고 background-image임!  */
+
+
             background-repeat: no-repeat;
             background-position: center;
 
             border: 1px solid #222;
+        }
             
             /* 스트라이프 이미지 : 웹의 아이콘 등을 하나의 사진으로 묶어 용랼을 효율적으로 관리하는 방식 
             요즘은 인터넷 속도나 용량이 예전에 비해 굉장히 발달해 의미가 많이 퇴색되었다. */
 
             
             /* background-repeat: no-repeat; */
-        }
+
+            .notice{
+                background: url(../img/폼폼푸린.png)  no-repeat -17px -521px; 
+                width: 188px;
+                height: 236px;}
+             /* 스프라이트png 내가 원하는 크기 찾아주는 사이트 '스프라이트카우'  */
     </style>
 </head>
 <body>
     <div class="background-box"></div>
+    <div class="notice"></div>
 </body>
 </html>
